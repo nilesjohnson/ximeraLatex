@@ -1,112 +1,129 @@
-% A LaTeX2e document class for preparing handouts and online material
-% via Ximera.
+%%
+%% This is file `ximera.cls',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% ximera.dtx  (with options: `classXimera')
+%% src/banner.dtx  (with options: `classXimera')
+%% src/options.dtx  (with options: `classXimera')
+%% src/packages.dtx  (with options: `classXimera')
+%% src/tikzexport.dtx  (with options: `classXimera')
+%% src/hyperref.dtx  (with options: `classXimera')
+%% src/suppress.dtx  (with options: `classXimera')
+%% src/makeCounter.dtx  (with options: `classXimera')
+%% src/pagesetup.dtx  (with options: `classXimera')
+%% src/metadata.dtx  (with options: `classXimera')
+%% src/outcomes.dtx  (with options: `classXimera')
+%% src/macros.dtx  (with options: `classXimera')
+%% src/theorems.dtx  (with options: `classXimera')
+%% src/enumerate.dtx  (with options: `classXimera')
+%% src/proof.dtx  (with options: `classXimera')
+%% src/only.dtx  (with options: `classXimera')
+%% src/problem.dtx  (with options: `classXimera')
+%% src/hints.dtx  (with options: `classXimera')
+%% src/abstract.dtx  (with options: `classXimera')
+%% src/title.dtx  (with options: `classXimera')
+%% src/image.dtx  (with options: `classXimera')
+%% src/interactives/javascript.dtx  (with options: `classXimera')
+%% src/interactives/include.dtx  (with options: `classXimera')
+%% src/interactives/geogebra.dtx  (with options: `classXimera')
+%% src/interactives/desmos.dtx  (with options: `classXimera')
+%% src/interactives/google.dtx  (with options: `classXimera')
+%% src/interactives/graph.dtx  (with options: `classXimera')
+%% src/link.dtx  (with options: `classXimera')
+%% src/interactives/video.dtx  (with options: `classXimera')
+%% src/answer.dtx  (with options: `classXimera')
+%% src/choice.dtx  (with options: `classXimera')
+%% src/solution.dtx  (with options: `classXimera')
+%% src/feedback.dtx  (with options: `classXimera')
+%% src/freeresponse.dtx  (with options: `classXimera')
+%% src/verbatim.dtx  (with options: `classXimera')
+%% src/dialogue.dtx  (with options: `classXimera')
+%% src/instructornotes.dtx  (with options: `classXimera')
+%% src/xkcd.dtx  (with options: `classXimera')
+%% src/foldable.dtx  (with options: `classXimera')
+%% src/leash.dtx  (with options: `classXimera')
+%% src/interactives/sagemath.dtx  (with options: `classXimera')
+%% src/jax.dtx  (with options: `classXimera')
+%% src/ungraded.dtx  (with options: `classXimera')
+%% ------------:| ------------------------------------------------------------
+%%       ximera:| Simultaneously writing print and online interactive materials
+%%       Author:| Jim Fowler and Jeramiah Hocutt and Oscar Levin and Jason Nowell and Hans Parshall and Bart Snapp
+%%       E-mail:| bart.snapp@gmail.com
+%%      License:| Released under the LaTeX Project Public License v1.3c or later
+%%          See:| http://www.latex-project.org/lppl.txt
+%% 
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesClass{ximera}
+ [2018/10/28 v1.00
+ Simultaneously write print and online interactive materials]
 
-%% ximera.cls
-%% Copyright (c) 2013 Bart Snapp and Jim Fowler
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License, either version 1.3c
-% of this license or (at your option) any later version.
-% The latest version of this license is in
-%   http://www.latex-project.org/lppl.txt
-% and version 1.3c or later is part of all distributions of LaTeX
-% version 2013/12/01 or later.
-%
-% This work has the LPPL maintenance status "author-maintained".
-% 
-% This work consists of the files ximera.cls
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% Bart Snapp
-%%% Department of Mathematics
-%%% The Ohio State University
-
-\def\fileversion{1.24}
-\def\filedate{2016/08/17}
-
-% ---------------------------------------------------------------------
-% ---------------------------------------------------------------------
-% If there's some feature that you'd like that this file doesn't
-% provide, tell Bart Snapp or Jim Fowler about it.  
-%
-% Thanks to: 
-%
-% Philip Hirschhorn as this document class is based on his
-% ``exam.cls.'' The original work can be found at:
-% http://www-math.mit.edu/~psh/
-% --------------------------------------------------------------------
-% --------------------------------------------------------------------
-
-
-% --------------------------------------------------------------------
-% --------------------------------------------------------------------
-% Class Options
-% --------------------------------------------------------------------
-% --------------------------------------------------------------------
-
-\NeedsTeXFormat{LaTeX2e}
-
-\ProvidesClass{ximera}[\filedate\space Version \fileversion\space by
-  Bart Snapp]
-
+\let\m\message
+\def\w{\m{::}}\def\t{\m{:::}}\def\s{\m{ }}\def\n{\m{^^J}}\def\u{::'}\def\d{'::}\def\v{:::::}
+\n
+\m{\d.}\s\m{.\u}\w\m{}\m{\v}\s\s\m{\v}\m{}\m{.\v\v\v::::.}\s\m{}\t\n
+\s\m{\d.\u}\s\w\t\t\s\t\t\w\m{}\s\s\s\s\s\s\s\t\s\m{\u::}\n
+\s\s\t\s\s\w\t\m{}\t\t\m{}\t\m{ ::::\v}\m{.\v:\u}\m{}\m{\u}\m{\d}\n
+\s\m{.\u::.}\s\w\t\m{}\t\t\m{}\t\w\s\s\s\s\w\m{}\m{\d.}\s\m{\u}\s\m{\d}\n
+\m{.\u}\s\m{\d.}\w\t\s\m{':\u}\s\t\m{\d\v::}\w\s\m{}\m{\d.\u}\s\s\m{\d}\n
+\n
+\let\w\undefined
+\let\t\undefined
+\let\s\undefined
+\let\n\undefined
+\let\u\undefined
+\let\d\undefined
+\let\v\undefined
+\let\m\undefined
 \newif\ifhandout
 \handoutfalse
 \DeclareOption{handout}{\handouttrue}
-
-\newif\ifinstructornotes
-\instructornotesfalse
-\DeclareOption{instructornotes}{\instructornotestrue}   %% Yes. 
-\DeclareOption{noinstructornotes}{\instructornotestrue} %% This is hilarious.
-
+\newif\ifnoauthor
+\noauthorfalse
+\DeclareOption{noauthor}{\noauthortrue}
 \newif\ifnooutcomes
 \nooutcomesfalse
 \DeclareOption{nooutcomes}{\nooutcomestrue}
-
+\newif\ifinstructornotes
+\instructornotesfalse
+\DeclareOption{instructornotes}{\instructornotestrue}
+\DeclareOption{noinstructornotes}{\instructornotestrue}
 \newif\ifhints
 \hintsfalse
 \DeclareOption{hints}{\hintstrue}
-
-
 \newif\ifnewpage
 \newpagefalse
 \DeclareOption{newpage}{\newpagetrue}
-
 \newif\ifnumbers
 \numbersfalse
 \DeclareOption{numbers}{\numberstrue}
-
-\newif\ifwordchoicegiven%% suppresses choices in handout mode
+\newif\ifwordchoicegiven
 \wordchoicegivenfalse
 \DeclareOption{wordchoicegiven}{\wordchoicegiventrue}
+\newif\iffirstinlinechoice% Support for other wordchoice command contents.
+\firstinlinechoicetrue
 
-\newif\ifshuffle
-\shufflefalse
+\newif\ifxake
+\xakefalse
+\DeclareOption{xake}{\xaketrue}
 
-\newif\ifspace 
-\spacefalse
-\DeclareOption{space}{\spacetrue}
-%% This basically works for exercises, though page breaks are weird. 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% tikzexport will generate SVGs and PNGs for tikzpictures
-%
-% This option is automatically chosen when compiling inside the Ximera sandbox
-%
 \newif\iftikzexport
 \tikzexportfalse
 \DeclareOption{tikzexport}{%
   \tikzexporttrue%
   \handoutfalse%
-  \shufflefalse%
-  \spacefalse%  
   \numbersfalse%
   \newpagefalse%
   \hintsfalse%
   \nooutcomesfalse%
 }
-
-\newif\ifxake
-\xakefalse
-\DeclareOption{xake}{\xaketrue}
 
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}%
@@ -114,45 +131,44 @@
 \ProcessOptions\relax
 \LoadClass{article}
 
-%%%% for allowing a ximera document to be input into a master ximera document
+\ifdefined\HCode
+  \xaketrue%
+  \tikzexporttrue%
+  \handoutfalse%
+  \numbersfalse%
+  \newpagefalse%
+  \hintsfalse%
+  \nooutcomesfalse%
+\fi
 
 
-% The first thing to do is to save the regular \LaTeX\ definitions of |\document|, |\enddocument|, and  |\documentclass|:
-%    \begin{macrocode}
-\let\old@document@subfiles\document
-\let\old@enddocument@subfiles\enddocument
-\let\old@documentclass@subfiles\documentclass
-%    \end{macrocode}
-%
-% Now the |document| `environment' is redefined and equaled to |comment|. As a consequence, the body of the main file is ignored by \LaTeX, and only the preamble is read (and anything that comes after |\end{document}|!). For |\documentclass|, having been already loaded one (|subfiles|), it is redefined and equaled to |\LoadClass|. The class and options of the main file are loaded identically.
-%    \begin{macrocode}
-\let\document\comment
-\let\enddocument\endcomment
-\let\documentclass\LoadClass\relax
-%    \end{macrocode}
-%
-% Here it comes something not so obvious. In the usual situations, the |\preamble@file| contains some |\usepackage| commands, which, at the end, make |@| no longer a letter. That is why the next part needs a |\catcode| command, grouping, and |\global|'s.
-%    \begin{macrocode}
-{\catcode`\@=11
-\global\let\document\old@document@subfiles
-\global\let\enddocument\old@enddocument@subfiles
-\global\let\documentclass\old@documentclass@subfiles
-\global\let\old@document@subfiles\undefined
-\global\let\old@enddocument@subfiles\undefined
-\global\let\old@documentclass@subfiles\undefined}
-%</class>
-%    \end{macrocode}
-%
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% externalize tikz images
-\PassOptionsToPackage{table}{xcolor}
+\RequirePackage[makeroom]{cancel}
+\RequirePackage[inline]{enumitem}
+\RequirePackage[pagestyles]{titlesec}
+\RequirePackage{titletoc}
+\RequirePackage{titling}
+\RequirePackage{url}
+\RequirePackage[table]{xcolor}
 \RequirePackage{tikz}
+\RequirePackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\usetikzlibrary{calc}
+\RequirePackage{fancyvrb}
+\RequirePackage{forloop}
+\RequirePackage{environ}% Included to allow saving of environment contents. This does *not* play well with various verbatem environments however and would be great to find a way around utilizing this package. One option is the "Suppress" command included below.
+\RequirePackage{amssymb}% Included to have access to math typeset.
+\RequirePackage{amsmath}% Included to have access to math typeset.
+\RequirePackage{amsthm}%  Included to have access to math typeset.
+\RequirePackage{xifthen}% http://ctan.org/pkg/xifthen
+\RequirePackage{multido}% http://ctan.org/pkg/multido
+\RequirePackage{listings} %% is this required???
 
+\RequirePackage{xkeyval}
+
+\RequirePackage{comment}
+\RequirePackage{gettitlestring}
+\RequirePackage{nameref}
+\RequirePackage{epstopdf}
 \ifdefined\HCode
   \tikzexporttrue
 \fi
@@ -163,14 +179,16 @@
   \ifdefined\HCode
     % in htlatex, just include the svg files
     \def\pgfsys@imagesuffixlist{.svg}
-    
+
     \tikzexternalize[prefix=./,mode=graphics if exists]
   \else
     % in pdflatex, actually generate the svg files
     \tikzset{
       /tikz/external/system call={
-        /usr/bin/pdflatex \tikzexternalcheckshellescape -halt-on-error -interaction=batchmode -jobname "\image" "\\PassOptionsToClass{tikzexport}{ximera}\texsource";
-        /usr/bin/pdf2svg \image.pdf \image.svg ;
+        pdflatex \tikzexternalcheckshellescape
+        -halt-on-error -interaction=batchmode
+        -jobname "\image" "\\PassOptionsToClass{tikzexport}{ximera}\texsource";
+        mutool draw -o \image.svg \image.pdf ;
         mutool draw -r 150 -c rgbalpha -o \image.png \image.pdf ;
       }
     }
@@ -179,169 +197,69 @@
 
   \fi
 
-\RequirePackage[inline]{enumitem}
-\RequirePackage[pagestyles]{titlesec} 
-\RequirePackage{titletoc} 
-\RequirePackage{titling}  
-\RequirePackage{url}
-\RequirePackage{xcolor}
-\RequirePackage{pgfplots}
-\usepgfplotslibrary{groupplots}
-\usetikzlibrary{calc}
-\RequirePackage{fancyvrb}
-\RequirePackage{environ}
-\RequirePackage{amssymb}
-\RequirePackage{amsmath}
-\RequirePackage{amsthm}
-\RequirePackage{xifthen}% http://ctan.org/pkg/xifthen
-\RequirePackage{multido}% http://ctan.org/pkg/multido
-\RequirePackage{listings}
-  
-\RequirePackage[framemethod=TikZ]{mdframed} %% Used to make pretty foldable
-
-\RequirePackage{comment}
-\oddsidemargin 62pt %% so we don't get weird margins in 2-sided mode
-\evensidemargin 62pt %% so we don't get weird margins in 2-sided mode
-\textwidth 345pt %% so we don't get weird margins in 2-sided mode
-\headheight 14pt %% so we don't get weird margins in 2-sided mode
-%\RequirePackage[margin=1in]{geometry} 
-
-
-
-% Don't use hyperref when using Tex4ht
 \ifdefined\HCode
+\RequirePackage{hyperref}
 \else
-  \RequirePackage[pdfpagelabels,colorlinks=true,allcolors=blue!30!black]{hyperref}
+\RequirePackage[pdfpagelabels,colorlinks=true,allcolors=blue!30!black]{hyperref}
+\pdfstringdefDisableCommands{\def\hskip{}}%% quiets warning
 \fi
-% We put hyperref after all other packages becuase that is better.
+\font\dummyft@=dummy \relax
+\def\suppress{%
+  \begingroup\par
+  \parskip\z@
+  \offinterlineskip
+  \baselineskip=\z@skip
+  \lineskip=\z@skip
+  \lineskiplimit=\maxdimen
+  \dummyft@
+  \count@\sixt@@n
+  \loop\ifnum\count@ >\z@
+    \advance\count@\m@ne
+    \textfont\count@\dummyft@
+    \scriptfont\count@\dummyft@
+    \scriptscriptfont\count@\dummyft@
+  \repeat
+  \let\selectfont\relax
+  \let\mathversion\@gobble
+  \let\getanddefine@fonts\@gobbletwo
+  \tracinglostchars\z@
+  \frenchspacing
+  \hbadness\@M}
+\def\endsuppress{\par\endgroup}
+\newcommand{\Make@Counter}[1]{% This is an internal macro that should probably be depreciated for the below universal macro.
+  \@ifundefined{c@#1}% Check to see if counter exists
+       {     % If not, create it and set it to 0.
+\newcounter{#1}
+\setcounter{#1}{0}
+}
+{%If so, reset to 0.
+\setcounter{#1}{0}
+}
+}
 
-% the article document class is made to have lines of text that are
-% not too long. 
-
-% http://tex.stackexchange.com/questions/71172/why-are-default-latex-margins-so-big
-
-% ---------------------------------------------------------------------
-% ---------------------------------------------------------------------
-% Exercise Headers
-% ---------------------------------------------------------------------
-% ---------------------------------------------------------------------
-
-\newcommand{\license}{\excludecomment}
-\newcommand{\acknowledgement}{\excludecomment}
-\renewcommand{\tag}{\excludecomment}
-             
-% ---------------------------------------------------------------------
-% ---------------------------------------------------------------------
-% Print Formatting
-% ---------------------------------------------------------------------
-% ---------------------------------------------------------------------
+\newcommand{\MakeCounter}[1]{%% Code located in "Utilitymacros.dtx"
+  \@ifundefined{c@#1}% Check to see if counter exists
+       {     % If not, create it and set it to 0.
+\newcounter{#1}
+\setcounter{#1}{0}
+}
+{%If so, reset to 0.
+\setcounter{#1}{0}
+}
+}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{5pt}
+\oddsidemargin 62pt
+\evensidemargin 62pt
+\textwidth 345pt
+\headheight 14pt
 
-\makeatletter
-\let\title\relax
-\newcommand{\title}[1][]{{\protected@xdef\@pretitle{#1}}\protected@xdef\@title}
-\makeatother
+\newcommand{\license}{\excludecomment}
 
-\title{}
+\newcommand{\acknowledgement}{\excludecomment}
 
-\makeatletter
-\let\abstract\relax
-\let\endabstract\relax
-\NewEnviron{abstract}{\protected@xdef\theabstract{\BODY}}
-\makeatother
-
-\newcounter{titlenumber}
-\renewcommand{\thetitlenumber}{\arabic{titlenumber}}
-%\renewcommand{\thesection}{\arabic{titlenumber}} %% Makes section numbers work
-\setcounter{titlenumber}{0}
-
-
-\makeatletter
-\newpagestyle{main}{
-\sethead[\textsl{\ifnumbers\thetitlenumber\quad\fi\@title}][][] % even
-{}{}{\textsl{\ifnumbers\thetitlenumber\quad\fi\@title}} % odd
-\setfoot[\thepage][][] % even
-{}{}{\thepage} % odd
-}
-\pagestyle{main}
-\makeatother
-
-% Redefine maketitle and put them in a table of contents.  The \phantomsection is to fix the hrefs.
-\makeatletter
-\renewcommand\maketitle{%
-  \addtocounter{titlenumber}{1}\phantomsection \ifnumbers\addcontentsline{toc}{section}{\thetitlenumber~\@title}\else\addcontentsline{toc}{section}{\@title}\fi %% puts titles in the toc, with or without numbers.
-  {\flushleft\large\bfseries \@pretitle\par\vspace{-1em}}
-  {\flushleft\LARGE\bfseries {\ifnumbers\thetitlenumber\fi}{\ifnumbers\hspace{1em}\else\hspace{0em}\fi}\@title \par }
-  \vskip .6em\noindent\textit\theabstract\setcounter{problem}{0}\setcounter{section}{0}\setcounter{subsection}{0}\par\vspace{2em}
-  \ifnooutcomes\else\ifhandout\else\let\thefootnote\relax\footnote{Learning outcomes: \theoutcomes}\fi\fi 
-  \aftergroup\@afterindentfalse
-  \aftergroup\@afterheading}
-\makeatother
-\relax
-
-\ifnumbers
-\setcounter{secnumdepth}{2}
-\renewcommand{\thesection}{\arabic{titlenumber}.\arabic{section}~} 
-\else
-\setcounter{secnumdepth}{-2}
-%\renewcommand{\thesection}{}
-%%magic to unindent unnumbered sections:
-%\makeatletter
-%\def\@seccntformat#1{\csname #1ignore\expandafter\endcsname\csname the#1\endcsname\quad}
-%\let\sectionignore\@gobbletwo
-%\let\latex@numberline\numberline
-%\def\numberline#1{\if\relax#1\relax\else\latex@numberline{#1}\fi}
-%\makeatother
-\fi
-\relax
-
-\makeatletter
-\def\activitystyle{}
-\newcounter{sectiontitlenumber}
-\setcounter{secnumdepth}{0}
-\newcommand\chapterstyle{%
-  \def\activitystyle{activity-chapter}
-  \def\maketitle{%
-    \addtocounter{titlenumber}{1}%
-    \addcontentsline{toc}{section}{\textbf{\thetitlenumber\quad\@title}}%
-                    {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
-                    {\flushleft\LARGE\sffamily\bfseries\thetitlenumber\quad\@title \par }%
-                    {\vskip .6em\noindent\textit\theabstract\setcounter{problem}{0}\setcounter{sectiontitlenumber}{0}}%
-                    \par\vspace{2em}}}
-
-\newcommand\sectionstyle{%
-  \def\activitystyle{activity-section}
-  \def\maketitle{%
-    \addtocounter{sectiontitlenumber}{1}
-    \addcontentsline{toc}{subsection}{\thetitlenumber.\thesectiontitlenumber\quad\@title}%
-    {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
-    {\flushleft\Large\sffamily\bfseries\thetitlenumber.\thesectiontitlenumber\quad\@title \par}%
-    {\vskip .6em\noindent\textit\theabstract}%
-    \par\vspace{2em}}}
-\makeatother
-
-\iftikzexport%% allows xake to handle \chapterstyle and \sectionstye
-\renewcommand\chapterstyle{\def\activitystyle{chapter}}
-\renewcommand\sectionstyle{\def\activitystyle{section}}
-\else
-\fi
-
-
-%% makes everymath display style even when inline, could be optional
-\everymath{\displaystyle} 
-%% Ok not everything, we also need this
-\let\prelim\lim 
-\renewcommand{\lim}{\displaystyle\prelim} 
-%% for display style limits
-
-% --------------------------------------------------------------------
-% --------------------------------------------------------------------
-% Content
-% --------------------------------------------------------------------
-% --------------------------------------------------------------------
-
+\renewcommand{\tag}{\excludecomment}
 \def\theoutcomes{}
 
 \ifdefined\HCode%
@@ -352,347 +270,103 @@
 
   \newcommand{\outcome}[1]{\edef\theoutcomes{\theoutcomes #1~}%
   \immediate\write\outcomefile{\unexpanded{\outcome}{#1}}}
-\fi%
-
-% --------------------------------------------------------------------
-% Videos
-
-%\newcommand{\video}[1]{\footnote{Video link: \url{#1}}}
-
-% Youtube link
-\newcommand{\youtube}[1]{YouTube link: \url{https://www.youtube.com/watch?v=#1}}
-
-% --------------------------------------------------------------------
-% Interactives
-
-%Geogebra link
-\newcommand{\geogebra}[3]{Geogebra link: \url{https://tube.geogebra.org/m/#1}}
-
-%Desmos link
-\newcommand{\desmos}[3]{Desmos link: \url{https://www.desmos.com/calculator/#1}}
-
-% Google Spreadsheet link (read only)
-\newcommand{\googleSheet}[5]{%
-  Google Spreadsheet link: \url{https://docs.google.com/spreadsheets/d/#1}%
-}
-
-% Embedded graph (in math mode)
-\newcommand{\graph}[2][]{\text{Graph of $#2$}}
-
-% Interactive element
-\newcommand{\includeinteractive}[1]{Interactive}
-
-%HTML 
-\NewEnviron{html}{\textbf{INTERACTIVE NOT AVAILABLE.}}
-	
-% --------------------------------------------------------------------
-% Hyperlinks to outside documents
-
-\newcommand*{\link}[2][]{#1%
-\ifthenelse{\equal{#1}{}}%
-{\footnote{Link: \url{#2}}}%
-{\footnote{See #1 at \url{#2}}}}
-                              
-
-%% image environment
-%\newenvironment{image}[1][]{\begin{center}}{\end{center}}
-\NewEnviron{image}[1][3in]{% 
-  \begin{center}\resizebox{#1}{!}{\BODY}\end{center}% resize and center
-}
-
-\newtheorem{theorem}{Theorem}
-%\newtheorem{acknowledgement}{Acknowledgement}
-\newtheorem{algorithm}{Algorithm}
-\newtheorem{axiom}{Axiom}
-\newtheorem{claim}{Claim}
-\newtheorem{conclusion}{Conclusion}
-\newtheorem{condition}{Condition}
-\newtheorem{conjecture}{Conjecture}
-\newtheorem{corollary}{Corollary}
-\newtheorem{criterion}{Criterion}
-\newtheorem{definition}{Definition}
-\newtheorem{example}{Example}
-\newtheorem*{explanation}{Explanation}
-\newtheorem{fact}{Fact}
-\newtheorem{idea}{Idea}
-\newtheorem{lemma}{Lemma}
-\newtheorem{model}{Model}
-\newtheorem{notation}{Notation}
-\newtheorem{observation}{Observation}
-\newtheorem{paradox}{Paradox}
-\newtheorem{procedure}{Procedure}
-\newtheorem{proposition}{Proposition}
-\newtheorem{remark}{Remark}
-\newtheorem{summary}{Summary}
-\newtheorem{template}{Template}
-\newtheorem{warning}{Warning}
+  \fi%
+\everymath{\displaystyle}
+\let\prelim\lim
+\renewcommand{\lim}{\displaystyle\prelim}
 
 
+      \newtheorem{theorem}{Theorem}
 
-\renewenvironment{proof}[1][\proofname]{\begin{trivlist}\item[\hskip \labelsep \itshape \bfseries #1{}\hspace{2ex}]}
-{\qed\end{trivlist}}
+      \newtheorem{algorithm}{Algorithm}
 
-\renewcommand{\qedsymbol}{$\blacksquare$}
+      \newtheorem{axiom}{Axiom}
 
-% ---------------------------------------------------------------------
-% ---------------------------------------------------------------------
-% Problems
-% ---------------------------------------------------------------------
-% ---------------------------------------------------------------------
+      \newtheorem{claim}{Claim}
 
-%% Prompt environment
-\ifhandout
-\NewEnviron{prompt}{}
-\else
-\newenvironment{prompt}
-               {\bgroup\color{gray!50!black}}
-               {\egroup}
-               \fi
+      \newtheorem{conclusion}{Conclusion}
 
-               %% Prompt environment
-\ifhandout
-\NewEnviron{onlineOnly}{}
-\else
-\newenvironment{onlineOnly}
-               {\bgroup\color{red!50!black}}
-               {\egroup}
-               \fi
-               
-%\NewEnviron{printOnly}{\iftikzexport\else{\BODY}\fi}
+      \newtheorem{condition}{Condition}
 
-               
+      \newtheorem{conjecture}{Conjecture}
 
-%% \newenvironment{prompt} %broke in true math mode
-%%                {\ifhandout\setbox0\vbox\bgroup\else\bgroup\color{gray!50!black}\fi}
-%%                {\ifhandout\egroup\else\egroup\fi}
+      \newtheorem{corollary}{Corollary}
 
-% ---------------------------------------------------------------------
-% ---------------------------------------------------------------------
-% Answers
-% ---------------------------------------------------------------------
-% ---------------------------------------------------------------------
+      \newtheorem{criterion}{Criterion}
 
-\makeatletter
-%defining keys for answer command key=value pairs
-\define@key{answer}{given}[true]{\def\ans@given{#1}}
-\define@key{answer}{tolerance}{\def\ans@tol{#1}} %note: currently no affect on pdf output
+      \newtheorem{definition}{Definition}
 
-%setting default values for answer command key=value pairs
-\setkeys{answer}{given=false}
-\newcommand{\answer}[2][]{%
-	\setkeys{answer}{#1}
-	%% when given=true, show answer in handout mode, show answer in "given box" outside handout mode
-	%% when given=false, do not show answer in handout mode, show answer outside handout mode
-	\ifthenelse{\boolean{\ans@given}}
-		{\ifhandout #2\else\underset{\scriptstyle\mathrm{given}}{\fbox{\ensuremath{#2}}}\fi}
-		{\ifhandout\fbox{\rm{?}}\else\fbox{\ensuremath{#2}}\fi}}% show answer in box outside handout mode
-             
-\makeatother
+      \newtheorem{example}{Example}
 
-%% multiple choice environment
+      \newtheorem*{explanation}{Explanation}
 
-% Jim: Originally this was \renewcommand{\theenumi}{$(\mathrm{\alph{enumi}})$}
-% but that breaks tex4ht because mathmode can only be processed by mathjax.
-% so now I made this just italicized.
+      \newtheorem{fact}{Fact}
+
+      \newtheorem{lemma}{Lemma}
+
+      \newtheorem{formula}{Formula}
+
+      \newtheorem{idea}{Idea}
+
+      \newtheorem{notation}{Notation}
+
+      \newtheorem{model}{Model}
+
+      \newtheorem{observation}{Observation}
+
+      \newtheorem{proposition}{Proposition}
+
+      \newtheorem{paradox}{Paradox}
+
+      \newtheorem{procedure}{Procedure}
+
+      \newtheorem{remark}{Remark}
+
+      \newtheorem{summary}{Summary}
+
+      \newtheorem{template}{Template}
+
+      \newtheorem{warning}{Warning}
+
 \renewcommand{\theenumi}{\textup{(\alph{enumi})}}
 \renewcommand{\labelenumi}{\theenumi}
 \renewcommand{\theenumii}{\textup{(\roman{enumii})}}
 \renewcommand{\labelenumii}{\theenumii}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\renewenvironment{proof}[1][\proofname]
+  {\begin{trivlist}\item[\hskip \labelsep \itshape \bfseries #1{}\hspace{2ex}]}
+{\qed\end{trivlist}}
 
-%% correct answers for multiple choice
-\newboolean{correct}
-\setboolean{correct}{true}
-\newcommand{\choice}[2][]{\item #2\ifthenelse{\boolean{#1}}{\ifhandout \else \,\checkmark\,\fi}{}}
-
-%% Not really meant to be used outside this package (used in wordChoice)
-\newcommand{\otherchoice}[2][]{\ignorespaces\ifthenelse{\boolean{#1}}{#2}{}\ignorespaces}
-%%%
-
-
-\newenvironment{multipleChoice}[1][]
-{\begin{trivlist}\item[\hskip \labelsep\small\bfseries Multiple Choice:]\hfil\begin{enumerate}}
-{\end{enumerate}\end{trivlist}}
-
-%multipleChoice* is for internal use only! (used in wordChoice)
-\newenvironment{multipleChoice*}[1][]
-{\begin{enumerate*}[before={\upshape{(\hspace{-.25em}}}, itemjoin={/\hspace{-.25em}}, after={\upshape{)}}, label={}]}
-{\end{enumerate*}}
-
-%multipleChoice** is for internal use only! (used in wordChoice)
-\newenvironment{multipleChoice**}[1][]{}{}
-
-
-
-%wordChoice is an in-line version of multipleChoice:  uses enumitem package
-%note, it is coded as a single line to avoid unwanted spaces in "given" mode
-\newcommand{\wordChoice}[1]{\let\choicetemp\choice\ifwordchoicegiven\def\choice{\otherchoice}\begin{multipleChoice**}#1\end{multipleChoice**}\else\begin{multipleChoice*}#1\end{multipleChoice*}\fi\let\choice\choicetemp}
-
-\newenvironment{selectAll}[1][]
-{\begin{trivlist}\item[\hskip \labelsep\small\bfseries Select All Correct Answers:]\hfil\begin{enumerate}}
-{\end{enumerate}\end{trivlist}}
-
-%% In the future we need this to (optionally) be desplayed in the
-%% problem, while the actual code lives in the solution. Here is how
-%% this could be implemented: Like the title/maketitle commands, the
-%% multiple-choice could be stored in \themultiplechoice, flip a
-%% boolean, and execute \makemultiplechoice at the \end of the
-%% problem.  We should also make a command called "\showchoices" that
-%% will show choices in the handout.
+\ifxake
+        \newenvironment{prompt}{}{}
+\else
+\ifhandout
+\NewEnviron{prompt}{}
+\else
+\newenvironment{prompt}
+     {\bgroup\color{gray!50!black}}
+        {\egroup}
+\fi
+\fi
 
 \ifhandout
-	\excludecomment{matrixAnswer}
-%% Note:  This workaround will throw an error "File ended while scanning use of \next" if "\end{matrixAnswer}" does not appear on its own line with no spaces preceding it.  This is a documented issue with the \excludecomment command.
-
+\NewEnviron{onlineOnly}{
+\iftikzexport
+\BODY
 \else
-	\newenvironment{matrixAnswer}
-	{
-    % First, we tell fancyvrb that we're inside a verbatim environment.
-    \VerbatimEnvironment
-    % Now we start the actual environment:
-    \begin{Verbatim}[
-        frame=lines,
-        label=Matrix Answer,
-        labelposition=topline,
-      ]%
-	}
-	{\end{Verbatim}}
 \fi
-
-
-\newboolean{given} %% required for freeResponse
-\setboolean{given}{true} %% could be replaced by a key=value pair later if needed
-
-\ifhandout
-\newenvironment{freeResponse}[1][false]%
-{%
-\def\givenatend{\boolean{#1}}\ifthenelse{\boolean{#1}}{\begin{trivlist}\item}{\setbox0\vbox\bgroup}{}
-}
-{%
-\ifthenelse{\givenatend}{\end{trivlist}}{\egroup}{}
 }
 \else
-\newenvironment{freeResponse}[1][false]%
-{%
-  \ifthenelse{\boolean{#1}}{\begin{trivlist}\item[\hskip \labelsep\bfseries Free Response (Given):\hspace{2ex}]}
-{\begin{trivlist}\item[\hskip \labelsep\bfseries Free Response:\hspace{2ex}]}
-{}
-}
-{\end{trivlist}}
+\newenvironment{onlineOnly}
+     {\bgroup\color{red!50!black}}
+{\egroup}
 \fi
 
-
-%% instructor intro/instructor notes
-%%
-\ifhandout % what follows is handout behavior
-\ifinstructornotes
-\newenvironment{instructorIntro}%
-{%
-  \begin{trivlist}\item[\hskip \labelsep\bfseries Instructor Introduction:\hspace{2ex}]
-}
-% %% line at the bottom} 
-{\end{trivlist}\par\addvspace{.5ex}\nobreak\noindent\hung}
-\else
-\newenvironment{instructorIntro}%
-{%
-\setbox0\vbox\bgroup
-}
-{%
-\egroup\ignorespacesafterend %% If this mysteriously starts breaking remove \ignorespacesafterend
-}
-\fi
-\else% for handout, so what follows is default
-\ifinstructornotes
-\newenvironment{instructorIntro}%
-{%
-\setbox0\vbox\bgroup
-}
-{%
-\egroup
-}
-\else
-\newenvironment{instructorIntro}%
-{%
-  \begin{trivlist}\item[\hskip \labelsep\bfseries Instructor Introduction:\hspace{2ex}]
-}
-% %% line at the bottom} 
-{\end{trivlist}\par\addvspace{.5ex}\nobreak\noindent\hung}
-\fi
-\fi
+\newcommand{\pdfOnly}[1]{\iftikzexport\else #1\fi}
 
 
-
-
-%% instructorNotes environment
-\ifhandout % what follows is handout behavior
-\ifinstructornotes
-\newenvironment{instructorNotes}%
-{%
-  \begin{trivlist}\item[\hskip \labelsep\bfseries Instructor Notes:\hspace{2ex}]
-}
-% %% line at the bottom} 
-{\end{trivlist}\par\addvspace{.5ex}\nobreak\noindent\hung}
-\else
-\newenvironment{instructorNotes}%
-{%
-\setbox0\vbox\bgroup
-}
-{%
-\egroup
-}
-\fi
-\else% for handout, so what follows is default
-\ifinstructornotes
-\newenvironment{instructorNotes}%
-{%
-\setbox0\vbox\bgroup
-}
-{%
-\egroup
-}
-\else
-\newenvironment{instructorNotes}%
-{%
-  \begin{trivlist}\item[\hskip \labelsep\bfseries Instructor Notes:\hspace{2ex}]
-}
-% %% line at the bottom} 
-{\end{trivlist}\par\addvspace{.5ex}\nobreak\noindent\hung}
-\fi
-\fi
-
-
-
-
-
-
-
-
-
-%% code answer environment
-%% You cannot use Envrion with the fancyvrb/listings package if you want nested environments
-
-\DefineVerbatimEnvironment{code}{Verbatim}{numbers=left,frame=lines,label=Code,labelposition=topline}
-%% \lstnewenvironment{python}
-%% {\lstset{language=python,numbers=left}}
-%% {}
-
-
-%% python answer environment
-%% You cannot use Envrion with the fancyvrb/listings package if you want nested environments
-
-\DefineVerbatimEnvironment{python}{Verbatim}{numbers=left,frame=lines,label=Python,labelposition=topline}
-%% \lstnewenvironment{python}
-%% {\lstset{language=python,numbers=left}}
-%% {}
-
-
-
-% ---------------------------------------------------------------------
-% Problem environment decorations (these should be user invoked, not default)
-
-% The decoration for these envrionments were inspired by
-% http://tex.stackexchange.com/questions/11098/nice-formatting-for-theorems?lq=1
-
-%\makeatletter%
+\providecommand{\latexProblemContent}[1]{#1}
+\Make@Counter{Iteration@probCnt}
 \newcommand{\hang}{% top theorem decoration
   \begingroup%
   \setlength{\unitlength}{.005\linewidth}% \linewidth/200
@@ -723,127 +397,117 @@
     \end{picture}%
   \endgroup%
 }%
-
-%%% shuffle environment
-\newif\iffirstproblem% Condition for first problem
-\firstproblemtrue
-
-\newenvironment{shuffle}[1][]
-{\shuffletrue\setcounter{problemType}{0}}
-{\refstepcounter{problem}
-\shufflefalse
-\global\firstproblemtrue}
-
-
-\newenvironment{exercise}[1][2in]
-{\iffirstproblem
-\def\spaceatend{#1}\refstepcounter{problem}\refstepcounter{problemType}
-\begin{trivlist}\item[\hskip\labelsep\sffamily\bfseries 
-Exercise \ifhandout\theproblem\else\ifshuffle\theproblem.\theproblemType\else\theproblem\fi\fi]
-\slshape
-\else\setbox0\vbox\bgroup\fi} %% removes exercise if in shuffle and not first problem
-{\iffirstproblem
-\ifhandout\ifspace\vspace{\spaceatend}\fi\fi %% space at end
-\par\addvspace{.5ex}\nobreak\noindent\hung %% line at the bottom
-\ifshuffle\addtocounter{problem}{-1}\fi %% the problem does not increase within shuffle
-\ifhandout\ifshuffle\global\firstproblemfalse\fi\fi %% removes other problems from shuffle in handout
-\ifhandout\ifnewpage\newpage\fi\fi %% adds newpage
-\end{trivlist}
-\else\egroup\fi}
-
-
-\newenvironment{problem}[1][2in]
-{\iffirstproblem
-\def\spaceatend{#1}\refstepcounter{problem}\refstepcounter{problemType}
-\begin{trivlist}\item[\hskip\labelsep\sffamily\bfseries 
-Problem \ifhandout\theproblem\else\ifshuffle\theproblem.\theproblemType\else\theproblem\fi\fi]
-\slshape
-\else\setbox0\vbox\bgroup\fi} %% removes exercise if in shuffle and not first problem
-{\iffirstproblem
-\ifhandout\ifspace\vspace{\spaceatend}\fi\fi %% space at end
-\par\addvspace{.5ex}\nobreak\noindent\hung %% line at the bottom
-\ifshuffle\addtocounter{problem}{-1}\fi %% the problem does not increase within shuffle
-\ifhandout\ifshuffle\global\firstproblemfalse\fi\fi %% removes other problems from shuffle in handout
-\ifhandout\ifnewpage\newpage\fi\fi %% adds newpage
-\end{trivlist}
-\else\egroup\fi}
-
-
-\newenvironment{question}[1][2in]
-{\iffirstproblem
-\def\spaceatend{#1}\refstepcounter{problem}\refstepcounter{problemType}
-\begin{trivlist}\item[\hskip\labelsep\sffamily\bfseries 
-Question \ifhandout\theproblem\else\ifshuffle\theproblem.\theproblemType\else\theproblem\fi\fi]
-\slshape
-\else\setbox0\vbox\bgroup\fi} %% removes exercise if in shuffle and not first problem
-{\iffirstproblem
-\ifhandout\ifspace\vspace{\spaceatend}\fi\fi %% space at end
-\par\addvspace{.5ex}\nobreak\noindent\hung %% line at the bottom
-\ifshuffle\addtocounter{problem}{-1}\fi %% the problem does not increase within shuffle
-\ifhandout\ifshuffle\global\firstproblemfalse\fi\fi %% removes other problems from shuffle in handout
-\ifhandout\ifnewpage\newpage\fi\fi %% adds newpage
-\end{trivlist}
-\else\egroup\fi}
-
-\newenvironment{exploration}[1][2in]
-{\iffirstproblem
-\def\spaceatend{#1}\refstepcounter{problem}\refstepcounter{problemType}
-\begin{trivlist}\item[\hskip\labelsep\sffamily\bfseries 
-Exploration \ifhandout\theproblem\else\ifshuffle\theproblem.\theproblemType\else\theproblem\fi\fi]
-\slshape
-\else\setbox0\vbox\bgroup\fi} %% removes exercise if in shuffle and not first problem
-{\iffirstproblem
-\ifhandout\ifspace\vspace{\spaceatend}\fi\fi %% space at end
-\par\addvspace{.5ex}\nobreak\noindent\hung %% line at the bottom
-\ifshuffle\addtocounter{problem}{-1}\fi %% the problem does not increase within shuffle
-\ifhandout\ifshuffle\global\firstproblemfalse\fi\fi %% removes other problems from shuffle in handout
-\ifhandout\ifnewpage\newpage\fi\fi %% adds newpage
-\end{trivlist}
-\else\egroup\fi}
-
-
-\newenvironment{xarmaBoost}[1][2in]
-{\iffirstproblem
-\def\spaceatend{#1}\refstepcounter{problem}\refstepcounter{problemType}
-\begin{trivlist}\item[\hskip\labelsep\sffamily\bfseries 
-Xarma Boost \ifhandout\theproblem\else\ifshuffle\theproblem.\theproblemType\else\theproblem\fi\fi]
-\slshape
-\else\setbox0\vbox\bgroup\fi} %% removes exercise if in shuffle and not first problem
-{\iffirstproblem
-\ifhandout\ifspace\vspace{\spaceatend}\fi\fi %% space at end
-\par\addvspace{.5ex}\nobreak\noindent\hung %% line at the bottom
-\ifshuffle\addtocounter{problem}{-1}\fi %% the problem does not increase within shuffle
-\ifhandout\ifshuffle\global\firstproblemfalse\fi\fi %% removes other problems from shuffle in handout
-\ifhandout\ifnewpage\newpage\fi\fi %% adds newpage
-\end{trivlist}
-\else\egroup\fi}
-
-%% Feedback
-\ifhandout
-\newenvironment{feedback}{\setbox0\vbox\bgroup}
-               {\egroup}
-               
-               \else
-               
-               \newenvironment{feedback}[1][attempt]
-                              {\begin{trivlist}\item[\hskip \labelsep\small\slshape\bfseries Feedback (#1):\hspace{2ex}]\small\slshape}
-               {\end{trivlist}}
-               \fi
-               
-
-
-%% Hints
-\ifhandout
-\newenvironment{hint}{\setbox0\vbox\bgroup}
-{\egroup\ignorespacesafterend}
-
+\MakeCounter{problem}
+\newcommand{\problemNumber}{
+\ifcsname c@depth\Roman{problem@Depth}Count\endcsname% Check to see if counter exists
 \else
-
-\newenvironment{hint}{
-\begin{trivlist}\item[\hskip \labelsep\small\slshape\bfseries Hint:\hspace{2ex}]
-\small\slshape}
-{\end{trivlist}}
+\expandafter\newcounter{depth\Roman{problem@Depth}Count}
+\expandafter\setcounter{depth\Roman{problem@Depth}Count}{0}
 \fi
+
+\expandafter\stepcounter{depth\Roman{problem@Depth}Count}
+\arabic{depthICount}% The first problem depth, what use to be |\theproblem|.
+
+\forloop{Iteration@probCnt}{2}{\arabic{Iteration@probCnt} < \numexpr \value{problem@Depth} + 1 \relax}{%
+    .\expandafter\arabic{depth\Roman{Iteration@probCnt}Count}% Get the problem number of the next depth level and append it with a ".".
+}
+}
+
+%%%%%% Configure various problem environment commands
+\Make@Counter{problem@Depth}
+
+%%%% Configure environments start content
+
+\newcommand{\problemEnvironmentStart}[2]{%
+
+\stepcounter{problem@Depth}% Started a problem, so we've sunk another problem layer.
+\def\spaceatend{#1}%
+\begin{trivlist}%
+\item%
+  [%
+    \hskip\labelsep\sffamily\bfseries
+    #2 \problemNumber% Determine the correct number of the problem, and the format of that number.
+]%
+\slshape
+}
+
+%%%%% Configure environments end content
+
+\newcommand{\problemEnvironmentEnd}{%This configures all the end content for a problem.
+\stepcounter{problem@Depth}
+\ifcsname c@depth\Roman{problem@Depth}Count\endcsname
+\expandafter\ifnum\expandafter\value{depth\Roman{problem@Depth}Count}>0
+\expandafter\setcounter{depth\Roman{problem@Depth}Count}{0}
+\fi
+\fi
+
+\addtocounter{problem@Depth}{-2}% Exited a problem so we've exited a problem layer. Need -2 because we steppped once at the start to check for needing a depth-level count reset.
+
+\par\addvspace{.5ex}\nobreak\noindent\hung %% line at the bottom
+
+\ifhandout
+\ifnewpage
+\newpage
+\fi
+\fi
+\end{trivlist}
+}
+
+%%%% Now populate the old environment names
+
+\newenvironment{problem}[1][2in]%
+{%Env start code
+\problemEnvironmentStart{#1}{Problem}
+}
+{%Env end code
+\problemEnvironmentEnd
+}
+
+\newenvironment{exercise}[1][2in]%
+{%Env start code
+\problemEnvironmentStart{#1}{Exercise}
+}
+{%Env end code
+\problemEnvironmentEnd
+}
+
+\newenvironment{exploration}[1][2in]%
+{%Env start code
+\problemEnvironmentStart{#1}{Exploration}
+}
+{%Env end code
+\problemEnvironmentEnd
+}
+
+\newenvironment{question}[1][2in]%
+{%Env start code
+\problemEnvironmentStart{#1}{Question}
+}
+{%Env end code
+\problemEnvironmentEnd
+}
+
+\newcounter{hintLevel}
+\setcounter{hintLevel}{0}
+\newenvironment{hint}{}{}
+\renewenvironment{hint}
+{
+\ifhandout
+\setbox0\vbox\bgroup
+\else
+\begin{trivlist}\item[\hskip \labelsep\small\slshape\bfseries Hint:\hspace{2ex}]
+\small\slshape
+\fi
+\stepcounter{hintLevel}
+}
+{
+\ifhandout
+\egroup\ignorespacesafterend
+\else
+\end{trivlist}
+\fi
+\addtocounter{hintLevel}{-1}
+}
 
 \ifhints
 \renewenvironment{hint}{
@@ -852,10 +516,352 @@ Xarma Boost \ifhandout\theproblem\else\ifshuffle\theproblem.\theproblemType\else
 {\end{trivlist}}
 \fi
 
+\let\abstract\relax
+\let\endabstract\relax
+\NewEnviron{abstract}{\protected@xdef\theabstract{\BODY}}
+\let\@emptyauthor\@author
+\def\author#1{\gdef\@author{#1}}
+\def\@author{\@latex@warning@no@line{No \noexpand\author given}}
+\def\and{and }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Dialogue
+\let\title\relax
+\newcommand{\title}[1][]{{\protected@xdef\@pretitle{#1}}\protected@xdef\@title}
 
+\title{}
+
+\newcounter{titlenumber}
+\renewcommand{\thetitlenumber}{\arabic{titlenumber}}
+\setcounter{titlenumber}{0}
+
+\newpagestyle{main}{
+\sethead[\textsl{\ifnumbers\thetitlenumber\hspace{1em}\fi\@title}][][] % even
+{}{}{\textsl{\ifnumbers\thetitlenumber\hspace{1em}\fi\@title}} % odd
+\setfoot[\thepage][][] % even
+{}{}{\thepage} % odd
+}
+\pagestyle{main}
+\renewcommand\maketitle{%
+  \addtocounter{titlenumber}{1}%
+  {\flushleft\large\bfseries \@pretitle\par\vspace{-1em}}
+  {\flushleft\LARGE\bfseries {\ifnumbers\thetitlenumber\fi}{\ifnumbers\hspace{1em}\else\hspace{0em}\fi}\@title \par }
+  \phantomsection%
+  \ifnumbers\addcontentsline{toc}{section}{\thetitlenumber~\@title}\else\addcontentsline{toc}{section}{\@title}\fi
+  \vskip .6em\noindent\textit\theabstract\setcounter{problem}{0}\setcounter{section}{0}\setcounter{subsection}{0}\par\vspace{2em}
+  \ifnooutcomes\else\let\thefootnote\relax\footnote{Learning outcomes: \theoutcomes}\fi
+  \ifnoauthor\else\let\thefootnote\relax\footnote{Author(s):~\@author}\fi
+  \aftergroup\@afterindentfalse
+  \aftergroup\@afterheading}
+
+\ifnumbers
+\setcounter{secnumdepth}{2}
+\renewcommand{\thesection}{\arabic{titlenumber}.\arabic{section}~}
+\else
+\setcounter{secnumdepth}{-2}
+\fi
+
+\def\activitystyle{}
+\newcounter{sectiontitlenumber}
+\setcounter{secnumdepth}{0}
+\newcommand\chapterstyle{%
+  \def\activitystyle{activity-chapter}
+  \def\maketitle{%
+    \addtocounter{titlenumber}{1}%
+                    {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
+                    {\flushleft\LARGE\sffamily\bfseries\thetitlenumber\hspace{1em}\@title \par }%
+                    {\vskip .6em\noindent\textit\theabstract\setcounter{problem}{0}\setcounter{sectiontitlenumber}{0}}%
+                    \par\vspace{2em}
+                    \phantomsection\addcontentsline{toc}{section}{\textbf{\thetitlenumber\hspace{1em}\@title}}%
+                  }}
+
+\newcommand\sectionstyle{%
+  \def\activitystyle{activity-section}
+  \def\maketitle{%
+    \addtocounter{sectiontitlenumber}{1}
+    {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
+    {\flushleft\Large\sffamily\bfseries\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title \par}%
+    {\vskip .6em\noindent\textit\theabstract}%
+    \par\vspace{2em}
+    \phantomsection\addcontentsline{toc}{subsection}{\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title}%
+  }}
+
+\iftikzexport%% allows xake to handle \chapterstyle and \sectionstye
+\renewcommand\chapterstyle{\def\activitystyle{chapter}}
+\renewcommand\sectionstyle{\def\activitystyle{section}}
+\else
+\fi
+
+\NewEnviron{image}[1][3in]{%
+  \begin{center}\resizebox{#1}{!}{\BODY}\end{center}% resize and center
+}
+\newcommand{\alt}[1]{}
+
+
+\DefineVerbatimEnvironment{javascript}{Verbatim}{numbers=left,frame=lines,label=JavaScript,labelposition=topline}
+
+
+\def\js#1{\mbox{\texttt{\detokenize{#1}}}}
+
+
+\define@key{interactive}{id}{\def\interactive@id{#1}}
+\setkeys{interactive}{id=}
+\newcommand{\includeinteractive}[2][]{
+\setkeys*{interactive}{#1}%
+\ifthenelse{\equal{\interactive@id}{}}{}{\recordvariable{\interactive@id}}
+Interactive
+}
+
+\newcommand{\geogebra}[3]{Geogebra link: \url{https://tube.geogebra.org/m/#1}}
+\newcommand{\desmos}[3]{Desmos link: \url{https://www.desmos.com/calculator/#1}}
+\newcommand{\googleSheet}[5]{%
+  Google Spreadsheet link: \url{https://docs.google.com/spreadsheets/d/#1}%
+}
+
+
+\newcommand{\graph}[2][]{\text{Graph of $#2$}}
+
+
+\newcommand*{\link}[2][]{#1%
+\ifthenelse{\equal{#1}{}}%
+{\footnote{Link: \url{#2}}}%
+{\footnote{See #1 at \url{#2}}}
+}
+
+\newcommand{\youtube}[1]{YouTube link: \url{https://www.youtube.com/watch?v=#1}}
+
+\ifdefined\HCode
+\newcommand{\recordvariable}[1]{}
+\else
+\newwrite\idfile
+\immediate\openout\idfile=\jobname.ids
+\newcommand{\recordvariable}[1]{\ifthenelse{\equal{#1}{}}{}{\immediate\write\idfile{var #1;}}}
+\fi
+\define@key{answer}{given}[true]{\def\ans@given{#1}}
+\define@key{answer}{tolerance}{\def\ans@tol{#1}}
+\define@key{answer}{validator}{}
+\define@key{answer}{id}{\def\ans@id{#1}}
+\define@key{answer}{format}{}
+\setkeys{answer}{id=,given=false}
+\newcommand{\answer}[2][]{%
+\ifmmode%
+\setkeys{answer}{#1}%
+\recordvariable{\ans@id}
+\ifthenelse{\boolean{\ans@given}}
+{% Start then statement
+\ifhandout
+#2
+\else
+\underset{\scriptstyle\mathrm{given}}{\fbox{\ensuremath{#2}}}
+\fi
+}% End then statement
+{% Start else statement
+\ifhandout
+\fbox{\rm{?}}
+\else% show answer in box outside handout mode
+\fbox{\ensuremath{#2}}
+\fi
+}% End else statement
+\else%
+\GenericError{\space\space\space\space}% Throw an error based on... something? -- Jason
+{Attempt to use \@backslashchar answer outside of math mode}
+{See https://github.com/ximeraProject/ximeraLatex for explanation.}
+{Need to use either inline or display math.}%
+\fi
+}
+\define@key{choice}{value}[]{\def\choice@value{#1}}
+\define@boolkey{choice}{correct}[true]{\def\choice@correct{#1}}
+\define@key{multipleChoice}{id}{\def\mc@id{#1}}
+\define@key{otherchoice}{value}[]{\def\otherchoice@value{#1}}
+\define@boolkey{otherchoice}{correct}[true]{\def\otherchoice@correct{#1}}
+\setkeys{choice}{correct=false,value=}
+\setkeys{multipleChoice}{id=}
+\setkeys{otherchoice}{correct=false,value=}
+\newcommand{\choice}[2][]{%
+\setkeys{choice}{#1}%
+\item{#2}
+\ifthenelse{\boolean{\choice@correct}}
+    {% Begin then result
+    \ifhandout% if it's a handout do nothing.
+    \else% otherwise place a checkmark when you select the "correct choice"... maybe? -- Jason
+        \,\checkmark\,\setkeys{choice}{correct=false}
+    \fi
+    }% End then result
+    {}% Begin/End else result.
+}
+
+\newcommand{\choiceEXP}[2][]{%
+\expandafter\setkeys\expandafter{choice}{#1}%
+\item{#2}
+\ifthenelse{\boolean{\choice@correct}}
+{% Begin then result
+\ifhandout
+\else
+\,\checkmark\,\setkeys{choice}{correct=false}
+\fi
+}% End then result
+{}% Begin/End else result.
+} %% note all the {} are needed in case the choice has [] in it.
+
+\newcommand{\otherchoice}[2][]{%
+\ignorespaces%
+\setkeys{otherchoice}{#1}%
+\ifthenelse{\boolean{\otherchoice@correct}}%
+{% Start then result
+#2\ignorespaces\setkeys{otherchoice}{correct=false}\ignorespaces%
+}% End then result
+{}% Start/End else result
+\ignorespaces%
+}%
+\newcommand{\inlinechoice}[2][]{%
+\setkeys{choice}{#1}%
+\iffirstinlinechoice
+(\hspace{-.25em}
+\firstinlinechoicefalse
+\else
+/
+\fi
+#2
+\ifthenelse{\boolean{\choice@correct}}%
+{% Start then result
+\ifhandout\else\checkmark\ignorespaces\setkeys{choice}{correct=false}\ignorespaces\fi%
+}% End then result
+{}% Start/End else result
+\hspace{-.25em}\ignorespaces%
+}
+
+
+\newenvironment{multipleChoice}[1][]
+{% Environment Start Code
+\setkeys{multipleChoice}{#1}%
+\recordvariable{\mc@id}%
+\begin{trivlist}
+\item[\hskip \labelsep\small\bfseries Multiple Choice:]\hfil
+\begin{enumerate}
+}% Note this means that \item has to be the first line after \begin{multipleChoice}.
+{% Environment End Code
+\end{enumerate}
+\end{trivlist}
+}
+
+\newenvironment{multipleChoice@}[1][]{}{)}
+
+
+\newcommand{\wordChoice}[1]{%
+\let\choicetemp\choice% Assign a "choicetemp" command to duplicate choice.
+\ifwordchoicegiven% If wordchoice option is on, we need to juggle around some definitions.
+\let\choice\otherchoice%
+#1
+\else% If it isn't the regular "choice" command should work.
+\let\choice\inlinechoice%
+\begin{multipleChoice@}%
+#1%
+\end{multipleChoice@}%
+\fi%
+\let\choice\choicetemp% Now that choicetmp has been manipulated to what we want, replace choice with it.
+}%
+
+
+\newenvironment{selectAll}[1][]
+{\begin{trivlist}\item[\hskip \labelsep\small\bfseries Select All Correct Answers:]\hfil\begin{enumerate}}
+    {\end{enumerate}\end{trivlist}}
+
+
+
+%% solution environment
+\ifhandout % what follows is handout behavior
+\newenvironment{solution}%
+       {%
+ \setbox0\vbox\bgroup
+       }
+               {%
+ \egroup
+       }
+\else
+\newenvironment{solution}%
+       {%
+ \begin{trivlist}
+ \item[\hskip \labelsep\bfseries Solution:\hspace{2ex}]
+       }
+       % %% line at the bottom}
+       {
+\end{trivlist}
+ \par\addvspace{.5ex}\nobreak\noindent\hung
+       }
+\fi
+
+\newcommand{\PH@Command}{}
+\newenvironment{validator}[1][]{
+\def\PH@Command{#1}% Use PH@Command to hold the content and be a target for "\expandafter" to expand once.
+\mbox{\texttt{\detokenize\expandafter{\PH@Command}}}% Now expand PH@Command once and then detokenize.
+}{}
+\ifhandout%
+\newenvironment{feedback}
+               {%
+ \setbox0\vbox\bgroup
+       }
+               {%
+ \egroup
+       }
+\else
+\newenvironment{feedback}[1][attempt]{
+
+\def\PH@Command{#1}% Use PH@Command to hold the content and be a target for "\expandafter" to expand once.
+
+\begin{trivlist}% Begin the trivlist to use formating of the "Feedback" label.
+\item[\hskip \labelsep\small\slshape\bfseries Feedback% Format the "Feedback" label. Don't forget the space.
+(\texttt{\detokenize\expandafter{\PH@Command}}):% Format (and detokenize) the condition for feedback to trigger
+\hspace{2ex}]\small\slshape% Insert some space before the actual feedback given.
+}{
+\end{trivlist} 
+}
+
+\fi
+\newboolean{given} %% required for freeResponse
+\setboolean{given}{true} %% could be replaced by a key=value pair later if needed
+
+\ifhandout
+\newenvironment{freeResponse}[1][false]%
+{%
+\def\givenatend{\boolean{#1}}
+\ifthenelse{\boolean{#1}}
+{% Begin then result
+\begin{trivlist}
+\item
+}% End then result
+{% Begin else result
+\setbox0\vbox\bgroup
+}% End else result
+}
+{%
+\ifthenelse{\givenatend}
+{% Begin then result
+\end{trivlist}
+}% End then result
+{% Begin else result
+\egroup
+}% End else result
+}
+\else
+\newenvironment{freeResponse}[1][false]%
+{% Environment Beginning Code
+  \ifthenelse{\boolean{#1}}%% Could probably change this with just putting the (given) in the boolean?-- Jason
+   {% Begin then result
+   \begin{trivlist}
+   \item[\hskip \labelsep\bfseries Free Response (Given):\hspace{2ex}]
+   }% End then result
+{% Begin else result
+\begin{trivlist}
+\item[\hskip \labelsep\bfseries Free Response:\hspace{2ex}]
+}% End else result
+}
+{% Environment Ending Code
+\end{trivlist}
+}
+\fi
+
+
+\DefineVerbatimEnvironment{code}{Verbatim}{numbers=left,frame=lines,label=Code,labelposition=topline}
+\DefineVerbatimEnvironment{python}{Verbatim}{numbers=left,frame=lines,label=Python,labelposition=topline}
+\DefineVerbatimEnvironment{javascriptCode}{Verbatim}{numbers=left,frame=lines,label=JavaScript,labelposition=topline}
 \newenvironment{dialogue}{%
    \renewcommand\descriptionlabel[1]{\hspace{\labelsep}\textbf{##1:}}
    \begin{description}%
@@ -863,186 +869,138 @@ Xarma Boost \ifhandout\theproblem\else\ifshuffle\theproblem.\theproblemType\else
    \end{description}%
 }
 
-\newcounter{problem} %% for the main problem
-\newcounter{problemType} %% for variations within shuffle
+%% instructor intro/instructor notes
+%%
+\ifhandout % what follows is handout behavior
+\ifinstructornotes
+\newenvironment{instructorIntro}%
+       {%
+ \begin{trivlist}
+ \item[\hskip \labelsep\bfseries Instructor Introduction:\hspace{2ex}]
+}
+       % %% line at the bottom}
+       {
+ \end{trivlist}
+ \par\addvspace{.5ex}\nobreak\noindent\hung
+       }
+\else
+\newenvironment{instructorIntro}%
+       {%
+ \setbox0\vbox\bgroup
+       }
+       {%If this mysteriously starts breaking
+                        % remove \ignorespacesafterend
+ \egroup\ignorespacesafterend
+       }
+               \fi
+\else% for handout, so what follows is default
+\ifinstructornotes
+\newenvironment{instructorIntro}%
+       {%
+         \setbox0\vbox\bgroup
+       }
+{%
+  \egroup
+}
+                \else
+        \newenvironment{instructorIntro}%
+{%
+  \begin{trivlist}
+  \item[\hskip \labelsep\bfseries Instructor Introduction:\hspace{2ex}]
+}
+{
+  \end{trivlist}
+  \par\addvspace{.5ex}\nobreak\noindent\hung
+}
+                \fi
+\fi
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Foldables
+%% instructorNotes environment
+\ifhandout % what follows is handout behavior
+\ifinstructornotes
+\newenvironment{instructorNotes}%
+       {%
+ \begin{trivlist}
+ \item[\hskip \labelsep\bfseries Instructor Notes:\hspace{2ex}]
+       }
+       % %% line at the bottom}
+       {
+\end{trivlist}
+ \par\addvspace{.5ex}\nobreak\noindent\hung
+       }
+       \else
+\newenvironment{instructorNotes}%
+       {%
+         \setbox0\vbox\bgroup
+       }
+{%
+  \egroup
+}
+                \fi
+\else% for handout, so what follows is default
+\ifinstructornotes
+\newenvironment{instructorNotes}%
+       {%
+ \setbox0\vbox\bgroup
+       }
+       {%
+ \egroup
+       }
+       \else
+       \newenvironment{instructorNotes}%
+              {%
+        \begin{trivlist}
+        \item[\hskip \labelsep\bfseries Instructor Notes:\hspace{2ex}]
+              }
+              % %% line at the bottom}
+              {
+        \end{trivlist}
+        \par\addvspace{.5ex}\nobreak\noindent\hung
+              }
+                      \fi
+                              \fi
 
-%% \newcounter{globalFold} %Global Flag to tell if environments should be folded.
-%%     % Set to 0 to fold, 
-%%     % Set to 1 to unfold, 
-%%     % Set to 2 to unfold without the foldable option (\unfoldable)
-%%     % Set to any other value to remove global override
-%% \setcounter{globalFold}{3} %default to no global override
-
-%% \newcounter{localFold} %Local Flag to tell if environments should be folded. 
-%%     % Set to 0 to fold, 
-%%     % Set to 1 to unfold, 
-%%     % Set to 2 to unfold without the foldable option (\unfoldable)
-%%     % Set to any other value to remove global override
-%% \setcounter{localFold}{3} %default to no local value
-
-
-%% %% Global set commands:
-
-%% %set global override to folded
-%% \newcommand{\expandAllFolds}{%
-%% \setcounter{globalFold}{0} 
-%% }
-
-%% %set global override to expanded
-%% \newcommand{\collapseAllFolds}{%
-%% \setcounter{globalFold}{1} 
-%% }
-
-%% %set global to override with printable pdf form
-%% \newcommand{\expandAllFoldsPDF}{%
-%% \setcounter{globalFold}{2}
-%% }
-
-%% %Reset global variable to return to local control
-%% \newcommand{\noGlobalFolds}{%
-%% \setcounter{globalFold}{3}
-%% }
+\newcommand{\xkcd}[1]{#1}
 
 \colorlet{textColor}{black} % since textColor is referenced below
 \colorlet{background}{white} % since background is referenced below
 
-% The core environments. Find results in 4ht file.
 %% pretty-foldable
-\iftikzexport
 \newenvironment{foldable}{%
 }{%
 }
-\else
-\renewmdenv[
-  font=\upshape,
-  outerlinewidth=3,
-  topline=false,
-  bottomline=false,
-  leftline=true,
-  rightline=false, 
-  leftmargin=0,
-  innertopmargin=0pt,
-  innerbottommargin=0pt,
-  skipbelow=\baselineskip,
-  linecolor=textColor!20!white,
-  fontcolor=textColor,
-  backgroundcolor=background
-]{foldable}%
-\fi
 
 %% pretty-expandable
-\iftikzexport\newenvironment{expandable}{%
+\newenvironment{expandable}{%
 }{%
 }
-\else
-\newmdenv[
-  font=\upshape,
-  outerlinewidth=3,
-  topline=false,
-  bottomline=false,
-  leftline=true,
-  rightline=false, 
-  leftmargin=0,
-  innertopmargin=0pt,
-  innerbottommargin=0pt,
-  skipbelow=\baselineskip,
-  linecolor=black,
-]{expandable}%
-\fi
-%% \newenvironment{expandable}{%
-%% }{%
-%% }
 
 \newcommand{\unfoldable}[1]{#1}
 
-%% % Command to set folded or unfolded.
-%% % \flexFold{#1}{#2}, #1 is the fold state, #2 is the content. 
-%%     % For fold state:
-%%     % Set to 0 to fold, 
-%%     % Set to 1 to unfold, 
-%%     % Set to 2 to unfold without the foldable option (\unfoldable)
-%%     % Set to any other value to remove global override
-
-%% \newcommand{\flexFold}[2]{%
-
-%% \setcounter{localFold}{#1} %set local fold flag to user's value.
-
-%% \ifthenelse{\value{globalFold} = 0}{
-%%     \begin{expandable} %Make an unfolded version
-%%     #2
-%%     \end{expandable}
-%%     }
-%%     {
-%%     \ifthenelse{\value{globalFold} = 1}{
-%%         \begin{foldable} %make an unfolded version
-%%         #2
-%%         \end{foldable}
-%%         }
-%%         {
-%%         \ifthenelse{\value{globalFold} = 2}{
-%%             \unfoldable{#2}
-%%             }
-%%             {
-%%             \ifthenelse{\value{localFold}=0}
-%%                 {
-%%                 \begin{expandable}
-%%                 #2
-%%                 \end{expandable}
-%%                 }
-%%                 {
-%%                 \ifthenelse{\value{localFold} = 1}
-%%                     {
-%%                     \begin{foldable}
-%%                     #2
-%%                     \end{foldable}
-%%                     }
-%%                     {
-%%                     \unfoldable{#2}
-%%                     }
-%%                 }
-%%             }
-%%         }
-%%     }
-%%     %Reset local fold flag
-%% \setcounter{localFold}{3} %reset to remove local fold flag
-%% }
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\DefineVerbatimEnvironment{sageCell}{Verbatim}{numbers=left,frame=lines,label=SAGE,labelposition=topline}
-\DefineVerbatimEnvironment{sageOutput}{Verbatim}{numbers=left,frame=lines,label=SAGE-Output,labelposition=topline}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newcommand{\xkcd}[1]{#1}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Leash
 
 \newenvironment{leash}[1]{%
 }{%
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% When designing new elements, it is nice to be able to wrap things in a class
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% When using mathjax, it is useful to dump all the newcommands to a "jax" file
+\IfFileExists{sagetex.sty}{\RequirePackage{sagetex}}{}
+
+\DefineVerbatimEnvironment{sageCell}{Verbatim}{numbers=left,frame=lines,label=SAGE,labelposition=topline}
+
+\DefineVerbatimEnvironment{sageOutput}{Verbatim}{numbers=left,frame=lines,label=SAGE-Output,labelposition=topline}
+
 
 \ifdefined\HCode
   \else
     \newwrite\myfile
     \immediate\openout\myfile=\jobname.jax
+\fi
+\ifdefined\HCode
+  \else
     \immediate\write\myfile{\unexpanded{\newenvironment}{prompt}{}{}}
-
-    \makeatletter
-
+\fi
+\ifdefined\HCode
+  \else
 \let\@oldargdef\@argdef
 \long\def\@argdef#1[#2]#3{%
 \immediate\write\myfile{\unexpanded{\newcommand}{\unexpanded{#1}}[\unexpanded{#2}]{\unexpanded{#3}}}%
@@ -1052,7 +1010,31 @@ Xarma Boost \ifhandout\theproblem\else\ifshuffle\theproblem.\theproblemType\else
 \let\@OldDeclareMathOperator\DeclareMathOperator
 \renewcommand{\DeclareMathOperator}[2]{\@OldDeclareMathOperator{#1}{#2}\immediate\write\myfile{\unexpanded{\DeclareMathOperator}{\unexpanded{#1}}{\unexpanded{#2}}}}
 
-    \makeatother
 \fi
-
-
+\newenvironment{ungraded}{}{}
+%% 
+%% Copyright (C) 2018 by Bart Snapp <bart.snapp@gmail.com> and Jim Fowler <kisonecat@gmail.com>
+%% 
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License (LPPL), either
+%% version 1.3c of this license or (at your option) any later
+%% version.  The latest version of this license is in the file:
+%% 
+%% http://www.latex-project.org/lppl.txt
+%% 
+%% This work is "maintained" (as per LPPL maintenance status) by
+%% Bart Snapp. The source code can be found at:
+%% 
+%% https://github.com/XimeraProject/ximeraLatex
+%% 
+%% This work consists of the file ximera.dtx, the associated files
+%% under src/, and a Makefile.
+%% 
+%% Running "make" generates the derived files README, ximera.pdf, ximera.cls, xourse.cls.
+%% 
+%% Running "make inst" installs the files in the user's TeX tree.
+%% 
+%% Running "make install" installs the files in the local TeX tree.
+%% 
+%%
+%% End of file `ximera.cls'.
